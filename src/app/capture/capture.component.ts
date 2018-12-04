@@ -1,15 +1,16 @@
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
-import { DataService } from './data.service';
-import { VerifyService } from './verify.service';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import {VerifyService} from '../verify.service';
+import { DataService } from '../data.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-capture',
+  templateUrl: './capture.component.html',
+  styleUrls: ['./capture.component.css']
 })
-export class AppComponent implements AfterViewInit {
-  title = 'AgeRecongnition';
-  imageUrl:string;
+export class CaptureComponent  {
+  
+  imageUrl1:string;
+  imageUrl2:string;
   personnes : any = [];
   comparisation: any = [];
 
@@ -118,10 +119,5 @@ export class AppComponent implements AfterViewInit {
     });
   }
 
-  drawRect(){
-                
-    
-  }
-  
+
 }
- 
